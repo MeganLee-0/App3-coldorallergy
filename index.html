@@ -62,8 +62,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
   </script>
 
-
-<!-- <style>	
+<!-- this <style> code section enables the app to display pages within the html body. -->
+<style>	
 .body {
      margin: 0em;
 }
@@ -83,118 +83,118 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     left: 0vw;
     z-index: 1;
 }
-</style>-->
+</style>
 
-<body>
-<div id="header" class="w3-container w3-flat-carrot">
+<body> <!--this sectio codes for the very first/introduction page of the web app that tells what the survey is about and gives some disclaimers-->
+<div id="header" class="w3-container w3-flat-carrot"> <!--this formats the header, its content/title, and its color-->
 	<h1>Cold or Allergies?</h1>
-</div>
+</div> <!--closes the header code section -->
 	
-<div id="content" class="w3-container">
-	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
+<div id="content" class="w3-container"> <!--this section is the content of the page-->
+	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p> <!--first sentence, introduces purpose of survey -->
 	
-	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
+	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a> <!--this codes for the button, including what it says and what it looks like, and where it leads to (to the next page, page one) -->
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
-<div class="page" id="one">
-	<div id="header" class="w3-container w3-flat-carrot">
+<div class="page" id="one"> <!--this section codes for page one that contains the first question. Gives the code section its identity -->
+	<div id="header" class="w3-container w3-flat-carrot"> <!-- formats the header, its content/title, and color-->
 		<h1>Question 1</h1>
 	</div>
 	
-    	<div id="content" class="w3-container">
-	<p>Are your eyes watery or itchy?</p>    
-	<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-         	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
- </div><!-- /content -->
+    	<div id="content" class="w3-container"> <!--this section is the content of the page. This line starts the coding for it-->
+	<p>Are your eyes watery or itchy?</p>  <!--content of question 1-->  
+	<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--codes for the yes button, also codes so that it triggers the allergyAdd function which increases the allergy count variable-->
+         	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a> <!--codes for the no button, also codes so that it triggers the coldAdd function which increases the cold count variable-->
+ </div><!-- closes the code section for page 1 -->
 
 </div>
 
-<div class="page" id="two">
-	<div id="header" class="w3-container w3-flat-carrot">
+<div class="page" id="two"> <!--this section codes for page two that contains the second question. Gives the code section its identity -->
+	<div id="header" class="w3-container w3-flat-carrot"> <!-- formats the header, its content/title, and color-->
 		<h1>Question 2</h1>
 	</div>
 	
-	<div id="content" class="w3-container">
-	<p>Do you have a fever?</p>    
-	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
-         	<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
- </div><!-- /content -->
+	<div id="content" class="w3-container"> <!--this section is the content of the page. This line starts the coding for it-->
+	<p>Do you have a fever?</p>    <!--content of question 2--> 
+	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a> <!--codes for the yes button, also codes so that it triggers the coldAdd function which increases the cold count variable-->
+         	<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No</a> <!--codes for the no button, also codes so that it triggers the allergyAdd function which increases the allergy count variable-->
+ </div><!-- closes the code section for page 2 -->
 
 </div>
 
-<div class="page" id="three">
-	<div id="header" class="w3-container w3-flat-carrot">
+<div class="page" id="three"> <!--this section codes for page three that contains the third question. Gives the code section its identity -->
+	<div id="header" class="w3-container w3-flat-carrot"> <!-- formats the header, its content/title, and color-->
 		<h1>Question 3</h1>
 	</div>
 	
-	<div id="content" class="w3-container">
-	<p>Do you have a sore throat?</p>    
-	<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
-         	<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
- </div><!-- /content -->
+	<div id="content" class="w3-container"> <!--this section is the content of the page. This line starts the coding for it-->
+	<p>Do you have a sore throat?</p>    <!--content of question 3--> 
+	<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a> <!--codes for the yes button, also codes so that it triggers the coldAdd function which increases the cold count variable-->
+         	<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black">No</a> <!--codes for the no button, also codes so that it triggers the allergyAdd function which increases the allergy count variable-->
+ </div><!-- closes the code section for page 3 -->
 	
 </div>
 
-<div class="page" id="four">
-	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Question 4</h1>
+<div class="page" id="four"> <!--this section codes for page four that contains the fourth question. Gives the code section its identity -->
+	<div id="header" class="w3-container w3-flat-carrot"> <!-- formats the header, its content/title, and color-->
+		<h1>Question 4</h1> 
 	</div>
 	
-	<div id="content" class="w3-container">
-	<p>Are your symptoms seasonal or chronic?</p>    
-	<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-         	<a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
- </div><!-- /content -->
+	<div id="content" class="w3-container"> <!--this section is the content of the page. This line starts the coding for it-->
+	<p>Are your symptoms seasonal or chronic?</p>   <!--content of question 4-->  
+	<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--codes for the yes button, also codes so that it triggers the allergyAdd function which increases the allergy count variable-->
+         	<a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a> <!--codes for the no button, also codes so for it to trigger the coldAdd function which increases the cold count variable-->
+ </div><!-- closes the code section for page 4 -->
 	
 </div>
 	
-<div class="page" id="five">
-	<div id="header" class="w3-container w3-flat-carrot">
+<div class="page" id="five"> <!--this section codes for page five that contains the fifth question. Gives the code section its identity -->
+	<div id="header" class="w3-container w3-flat-carrot"> <!-- formats the header, its content/title, and color-->
 		<h1>Question 5</h1>
 	</div>
 	
-	<div id="content" class="w3-container">
-	<p>Do you have general body aches and pains?</p>    
-	<a href="#six"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
-         	<a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
- </div><!-- /content -->
+	<div id="content" class="w3-container"> <!--this section is the content of the page. This line starts the coding for it-->
+	<p>Do you have general body aches and pains?</p>    <!--content of question 5--> 
+	<a href="#six"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a> <!--codes for the yes button, also codes so that it triggers the coldAdd function which increases the cold count variable-->
+         	<a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black">No</a> <!--codes for the no button, also codes so that it triggers the allergyAdd function which increases the allergy count variable-->
+ </div><!-- closes the code section for page 5 -->
 	
 </div>
 	
-<div class="page" id="six">
-	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Question 6</h1>
+<div class="page" id="six"> <!--this section codes for page six that contains the sixth question. Gives the code section its identity -->
+	<div id="header" class="w3-container w3-flat-carrot"> <!-- formats the header, its content/title, and color-->
+		<h1>Question 6</h1> 
 	</div>
 	
-	<div id="content" class="w3-container">
-	<p>Do you have itchy ears and/or throat?</p>    
-	<a href="#results"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-         	<a href="#results"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
- </div><!-- /content -->
+	<div id="content" class="w3-container"> <!--this section is the content of the page. This line starts the coding for it-->
+	<p>Do you have itchy ears and/or throat?</p>    <!--content of question 6--> 
+	<a href="#results"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--codes for the yes button, also codes so that it triggers the allergyAdd function which increases the allergy count variable-->
+         	<a href="#results"  onclick="coldAdd();" class="w3-btn w3-black">No</a> <!--codes for the no button, also codes so that it triggers the coldAdd function which increases the cold count variable-->
+ </div><!-- closes the code section for page 6 -->
 	
 </div>
 
-<div class="page" id="results">
-	<div id="header" class="w3-container w3-flat-carrot">
+<div class="page" id="results"> <!--this section codes for the results page that contains the probabilities. Gives the code section its identity -->
+	<div id="header" class="w3-container w3-flat-carrot"> <!-- formats the header, its content/title, and color-->
 		<h1>Results</h1>
 	</div>
 	
-	<div id="content" class="w3-container">
-		<p id="calculations"></p>
-		<a href="#results"  onclick="results();" class="w3-btn w3-black"> Get Results Now</a>
+	<div id="content" class="w3-container"> <!--this section is the content of the page. This line starts the coding for it-->
+		<p id="calculations"></p> <!-- this is the paragraph with "calculations id that the function results() will replace with the resultText.innerHTML -->
+		<a href="#results"  onclick="results();" class="w3-btn w3-black"> Get Results Now</a> <!-- this codes for the get results now button. By clicking the button, it triggers the results() function so it can calculate and show the cold and allergy probabilies-->
 
 		 
 
- </div><!-- /content -->
+ </div><!-- closes the code section for the results page -->
 	
-</div>
+</div> <!-- some more code section closes -->
 	
 </div>	
 
-<footer class="w3-bottom w3-container w3-flat-carrot">
+<footer class="w3-bottom w3-container w3-flat-carrot"> <!-- codes for the footer and its content plus color -->
 	<p>DIY!</p>
 </footer>
 
