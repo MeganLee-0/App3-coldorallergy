@@ -37,28 +37,26 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
-        var allergy_count = 0;
-        var cold_count = 0;
+        var allergy_count = 0; //defined the allergy count variable. It is the number that depends on whether the respondent answers yes or no to the questions.
+        var cold_count = 0; //defined the cold count variable. It is the number that depends on whether the respondent answers yes or no to the questions.
 
 
-        function allergyAdd(){
-            allergy_count = allergy_count + 1;
+        function allergyAdd(){ //allergyAdd function that the yes and no buttons will summon, which will add to the allergy count variable.
+            allergy_count = allergy_count + 1; //whenever this funtion occurs, the allergy count will increase by one
         }
 
-        function coldAdd(){
-            cold_count = cold_count + 1;
+        function coldAdd(){ //coldAdd funtion that the yes and no buttons will summon, which will add to the cold count variable
+            cold_count = cold_count + 1; //whenever this function occurs, the cold count will increase by one
         }
 	
-	function results(){
-		// var allergyPercent = allergyAdd(4)*100;
-		// var coldPercent = coldAdd(4)*100;
+	function results(){ //this is the results funtion that when triggered, will compute the percentages of allergy and cold.
 		
-		var allergyPercent = allergy_count/4*100;
-		var coldPercent = cold_count/4*100;
+		var allergyPercent = allergy_count/6*100; //this is the math to calculate the allergy percent based on the allergy count
+		var coldPercent = cold_count/6*100; //the math to calculate the cold percent based on the cold count
 	
 	var resultText = document.getElementById("calculations");
 	resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; 	
-	}
+	} //replaces the paragraph with the id="calculations" with the allergyPercent and coldPercent variables that were triggered and calculated. 
 	
 		
 
@@ -147,6 +145,32 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 	<p>Are your symptoms seasonal or chronic?</p>    
+	<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+         	<a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+ </div><!-- /content -->
+	
+</div>
+	
+<div class="page" id="five">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 4</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>Do you have general body aches and pains?</p>    
+	<a href="#six"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
+         	<a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+ </div><!-- /content -->
+	
+</div>
+	
+<div class="page" id="six">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 4</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>Do you have itchy ears and/or throat?</p>    
 	<a href="#results"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
          	<a href="#results"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
  </div><!-- /content -->
