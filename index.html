@@ -51,8 +51,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	function results(){ //this is the results funtion that when triggered, will compute the percentages of allergy and cold.
 		
-		var allergyPercent = allergy_count/6*100; //this is the math to calculate the allergy percent based on the allergy count
-		var coldPercent = cold_count/6*100; //the math to calculate the cold percent based on the cold count
+		var allergyPercent = allergy_count/4*100; //this is the math to calculate the allergy percent based on the allergy count
+		var coldPercent = cold_count/4*100; //the math to calculate the cold percent based on the cold count
 	
 	var resultText = document.getElementById("calculations");
 	resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; 	
@@ -146,37 +146,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content" class="w3-container"> <!--this section is the content of the page. This line starts the coding for it-->
 	<p>Are your symptoms seasonal or chronic?</p>   <!--content of question 4-->  
 	<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--codes for the yes button, also codes so that it triggers the allergyAdd function which increases the allergy count variable-->
-         	<a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a> <!--codes for the no button, also codes so for it to trigger the coldAdd function which increases the cold count variable-->
+         	<a href="#results"  onclick="coldAdd();" class="w3-btn w3-black">No</a> <!--codes for the no button, also codes so for it to trigger the coldAdd function which increases the cold count variable-->
  </div><!-- closes the code section for page 4 -->
 	
 </div>
 	
-<div class="page" id="five"> <!--this section codes for page five that contains the fifth question. Gives the code section its identity -->
-	<div id="header" class="w3-container w3-flat-carrot"> <!-- formats the header, its content/title, and color-->
-		<h1>Question 5</h1>
-	</div>
-	
-	<div id="content" class="w3-container"> <!--this section is the content of the page. This line starts the coding for it-->
-	<p>Do you have general body aches and pains?</p>    <!--content of question 5--> 
-	<a href="#six"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a> <!--codes for the yes button, also codes so that it triggers the coldAdd function which increases the cold count variable-->
-         	<a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black">No</a> <!--codes for the no button, also codes so that it triggers the allergyAdd function which increases the allergy count variable-->
- </div><!-- closes the code section for page 5 -->
-	
-</div>
-	
-<div class="page" id="six"> <!--this section codes for page six that contains the sixth question. Gives the code section its identity -->
-	<div id="header" class="w3-container w3-flat-carrot"> <!-- formats the header, its content/title, and color-->
-		<h1>Question 6</h1> 
-	</div>
-	
-	<div id="content" class="w3-container"> <!--this section is the content of the page. This line starts the coding for it-->
-	<p>Do you have itchy ears and/or throat?</p>    <!--content of question 6--> 
-	<a href="#results"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--codes for the yes button, also codes so that it triggers the allergyAdd function which increases the allergy count variable-->
-         	<a href="#results"  onclick="coldAdd();" class="w3-btn w3-black">No</a> <!--codes for the no button, also codes so that it triggers the coldAdd function which increases the cold count variable-->
- </div><!-- closes the code section for page 6 -->
-	
-</div>
-
 <div class="page" id="results"> <!--this section codes for the results page that contains the probabilities. Gives the code section its identity -->
 	<div id="header" class="w3-container w3-flat-carrot"> <!-- formats the header, its content/title, and color-->
 		<h1>Results</h1>
